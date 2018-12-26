@@ -1,0 +1,105 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 866px;
+    min-height: 400px;
+    height: 100%;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    /* project id 982743 */
+    src: url('//at.alicdn.com/t/font_982743_hea9m32gz3r.eot');
+    src: url('//at.alicdn.com/t/font_982743_hea9m32gz3r.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_982743_hea9m32gz3r.woff') format('woff'),
+        url('//at.alicdn.com/t/font_982743_hea9m32gz3r.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_982743_hea9m32gz3r.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 80px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* color: #666; */
+}
+
+.iconfont2 {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* color: #666; */
+}
+
+/*本项目使用的18个图标  */
+.icon-prev:before {
+    content: '\e600';
+}
+
+.icon-next:before {
+    content: '\e601';
+}
+
+.icon-banner:before {
+    content: '\e60d';
+}
+
+.icon-basic:before {
+    content: '\e635';
+}
+
+.icon-experience:before {
+    content: '\e6d2';
+}
+
+.icon-interest:before {
+    content: '\e60c';
+}
+
+.icon-contact:before {
+    content: '\e763';
+}
+
+.icon-end:before {
+    content: '\e604';
+}
+.icon-personalMsg:before {
+    content: '\e684';
+}
+.icon-workExp:before {
+    content: '\e633';
+}
+.icon-myTarget:before {
+    content: '\e82d';
+}
+.icon-aboutMe:before {
+    content: '\e61f';
+}

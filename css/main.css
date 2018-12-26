@@ -1,3 +1,193 @@
-body {
-    background-color: #ccc;
+/* ********** head start ********** */
+#head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
+
+#head .tab {
+  text-align: center;
+  background-color: #2F2D30;
+}
+
+#head .tab ul {
+  display: inline-block;
+}
+
+#head .tab ul li {
+  float: left;
+  padding: 10px;
+  background-color: #2F2D30;
+}
+
+#head .tab ul li a {
+  position: relative;
+  display: block;
+  margin: 0 5px;
+  padding: 5px 0;
+  text-align: center;
+  color: #b5b5b5;
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+#head .tab ul li a:hover,
+#head .tab ul li a:focus {
+  color: #929292;
+}
+
+#head .tab ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 4px;
+  background: #d94f5c;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+#head .tab ul li.now a {
+  color: #d94f5c;
+}
+
+#head .tab ul li.now a::before {
+  width: 100%;
+}
+
+/* ********** head end ********** */
+
+/* ********** content start ********** */
+#content {
+  background-color: #fff;
+  height: calc(100%);
+  padding-top: 58px;
+  padding-bottom: 31px;
+  box-sizing: border-box;
+}
+
+#content .contentBox {
+  display: none;
+}
+
+/* ***** banner start ***** */
+#content .banner {
+  display: block;
+  height: 100%;
+}
+
+#content .banner .bannerBox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #000;
+  position: relative;
+}
+
+#content .banner .bannerBox ul {
+  height: 100%;
+  position: relative;
+  left: 0;
+}
+
+#content .banner .bannerBox ul li {
+  height: 100%;
+  float: left;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+}
+#content .banner .bannerBox ul li div {
+  width: calc(100% - 200px);
+  margin: 10px auto;
+}
+#content .banner .bannerBox ul li span {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, .3);
+  margin: 5px;
+  display: inline-block;
+}
+#content .banner .bannerBox>span {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 40px #000 inset;
+  text-align: center;
+  -webkit-transition: box-shadow 1s;
+  transition: box-shadow 1s;
+}
+
+#content .banner .bannerBox span.prev {
+  left: 0;
+}
+
+#content .banner .bannerBox span.next {
+  right: 0;
+}
+
+#content .banner .bannerBox span i {
+  color: #000;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content .banner .bannerBox:hover>span,
+#content .banner .bannerBox:focus>span {
+  box-shadow: 0 0 40px #2F2D30 inset;
+}
+
+#content .banner .bannerBox:hover>span i,
+#content .banner .bannerBox:focus>span i {
+  color: #B4B4B4;
+}
+
+/* ***** banner end ***** */
+/* ***** basic start ***** */
+#content .basic .basicBox ul {
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#content .basic .basicBox ul li {
+
+}
+
+
+/* ***** basic end ***** */
+/* ***** experience start ***** */
+/* ***** experience end ***** */
+/* ***** interest start ***** */
+/* ***** interest end ***** */
+/* ***** contact start ***** */
+/* ***** contact end ***** */
+/* ***** end start ***** */
+/* ***** end end ***** */
+/* ********** content end ********** */
+
+/* ********** foot start ********** */
+#foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100%);
+  padding: 5px;
+  background-color: #2F2D30;
+  color: #ccc;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+/* ********** foot end ********** */
