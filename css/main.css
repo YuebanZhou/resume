@@ -11,17 +11,17 @@
   background-color: #2F2D30;
 }
 
-#head .tab ul {
+#head ul {
   display: inline-block;
 }
 
-#head .tab ul li {
+#head li {
   float: left;
   padding: 10px;
   background-color: #2F2D30;
 }
 
-#head .tab ul li a {
+#head a {
   position: relative;
   display: block;
   margin: 0 5px;
@@ -35,12 +35,12 @@
   transition: color .5s;
 }
 
-#head .tab ul li a:hover,
-#head .tab ul li a:focus {
+#head a:hover,
+#head a:focus {
   color: #929292;
 }
 
-#head .tab ul li a::before {
+#head a::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -53,11 +53,11 @@
   transition: width .5s;
 }
 
-#head .tab ul li.now a {
+#head li.now a {
   color: #d94f5c;
 }
 
-#head .tab ul li.now a::before {
+#head li.now a::before {
   width: 100%;
 }
 
@@ -66,10 +66,9 @@
 /* ********** content start ********** */
 #content {
   background-color: #fff;
-  height: calc(100%);
-  padding-top: 58px;
-  padding-bottom: 31px;
+  margin-top: 58px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 #content .contentBox {
@@ -79,63 +78,63 @@
 /* ***** banner start ***** */
 #content .banner {
   display: block;
-  height: 100%;
 }
 
-#content .banner .bannerBox {
+#content .bannerBox {
   width: 100%;
-  height: 100%;
   overflow: hidden;
   margin: 0 auto;
   background-color: #000;
   position: relative;
 }
 
-#content .banner .bannerBox ul {
-  height: 100%;
+#content .bannerBox ul {
   position: relative;
   left: 0;
 }
 
-#content .banner .bannerBox ul li {
+#content .bannerBox ul li {
   height: 100%;
   float: left;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 100% 100%;
   color: #fff;
 }
-#content .banner .bannerBox ul li div {
+
+#content .bannerBox ul li div {
   width: calc(100% - 200px);
   margin: 10px auto;
 }
-#content .banner .bannerBox ul li span {
+
+#content .bannerBox ul li span {
   padding: 5px;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(0, 0, 0, .3);
   margin: 5px;
   display: inline-block;
 }
-#content .banner .bannerBox>span {
+
+#content .bannerBox>span {
   position: absolute;
   top: 0;
   width: 100px;
-  height: 100%;
-  box-shadow: 0 0 40px #000 inset;
+  box-shadow: 0 0 40px transparent inset;
   text-align: center;
   -webkit-transition: box-shadow 1s;
   transition: box-shadow 1s;
 }
 
-#content .banner .bannerBox span.prev {
+#content .bannerBox .prev {
   left: 0;
 }
 
-#content .banner .bannerBox span.next {
+#content .bannerBox .next {
   right: 0;
 }
 
-#content .banner .bannerBox span i {
-  color: #000;
+#content .bannerBox span i {
+  color: transparent;
   -webkit-transition: color 1s;
   transition: color 1s;
   position: absolute;
@@ -144,30 +143,127 @@
   transform: translate(-50%, -50%);
 }
 
-#content .banner .bannerBox:hover>span,
-#content .banner .bannerBox:focus>span {
-  box-shadow: 0 0 40px #2F2D30 inset;
+#content .bannerBox:hover>span,
+#content .bannerBox:focus>span {
+  box-shadow: 0 0 40px #fff inset;
 }
 
-#content .banner .bannerBox:hover>span i,
-#content .banner .bannerBox:focus>span i {
-  color: #B4B4B4;
+#content .bannerBox:hover>span i,
+#content .bannerBox:focus>span i {
+  color: #fff;
 }
 
 /* ***** banner end ***** */
 /* ***** basic start ***** */
-#content .basic .basicBox ul {
+#content .basicBox ul {
   margin: 0 auto;
   padding: 10px 0;
 }
 
-#content .basic .basicBox ul li {
-
-}
+#content .basicBox ul li {}
 
 
 /* ***** basic end ***** */
 /* ***** experience start ***** */
+#content .experience {
+  overflow: auto;
+  background: url("../img/pagebgexp.jpg") no-repeat center center fixed;
+}
+
+#content .experienceBox {
+  overflow: auto;
+  position: relative;
+}
+
+#content .boxcontain {
+  margin-top: 20px;
+}
+
+#content .experienceBox .block {
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 10px;
+  border: 1px dotted #FFA730;
+  background-color: rgba(0, 0, 0, .3);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#content .experienceBox .block:before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 35px;
+  width: 60px;
+  height: 2px;
+  background: #FFA730;
+}
+
+
+
+#content .experienceBox .block i {
+  position: absolute;
+  left: -80px;
+  top: 26px;
+  background: transparent;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFA730;
+}
+#content .experienceBox .block .title .time {
+  color: #fbe0a4;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 20px;
+  
+}
+
+#content .experienceBox .block .title .company {
+  color: #fbe0a4;
+  font-weight: bold;
+  font-size: 20px;
+  
+}
+#content .experienceBox .block .sinblock {
+  padding: 10px;
+  border-top :1px dotted #FFA730;
+}
+#content .experienceBox .block .sinblock .time {
+  color: #fdf7c5;
+  line-height:50px;
+  font-weight: bold;
+}
+
+#content .experienceBox .block .sinblock .objectName {
+  color: #fdf7c5;
+  margin-left: 10px;
+  line-height:50px;
+  font-weight: bold;
+}
+#content .experienceBox .block .sinblock .text {
+  color: #fff;
+  margin-right: 10px;
+}
+
+#content .experienceBox .block .sinblock>div {
+  color: #b5b5b5;
+  line-height: 28px;
+}
+#content .experienceBox .line {
+  width: 4px;
+  /* background: #000; */
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  float: left;
+  height: 2700px;
+  background: #FFA730;
+  border-radius: 2px;
+
+}
+
 /* ***** experience end ***** */
 /* ***** interest start ***** */
 /* ***** interest end ***** */
@@ -191,3 +287,49 @@
 }
 
 /* ********** foot end ********** */
+:root {
+  --innerRadius: 15px;
+}
+/* 脉冲动画 */
+.lime {
+  position: absolute;
+  left: -75px;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  background: transparent;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--innerRadius));
+  height: calc(var(--innerRadius));
+  background-color: #FFA730;
+  border-radius: 50%;
+}
+
+.lime::before,
+.lime::after {
+  content: '';
+  position: absolute;
+  width: calc(var(--innerRadius) * 2);
+  height: calc(var(--innerRadius) * 2);
+  border: 2px solid #FFA730;
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+}
+
+.lime::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    filter: opacity(0.9);
+  }
+
+  to {
+    transform: scale(2);
+    filter: opacity(0);
+  }
+}

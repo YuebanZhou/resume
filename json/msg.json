@@ -1,0 +1,184 @@
+{
+    "imgarr": ["./img/imager1.png",
+        "./img/imager2.png",
+        "./img/imager3.png",
+        "./img/imager4.png",
+        "./img/imager5.png",
+        "./img/imager6.png",
+        "./img/imager7.png"
+    ],
+    "msgarr": [
+        [
+            "姓名：周琰",
+            "年龄：24",
+            "学历：全日制本科学士",
+            "毕业院校：河北北方学院",
+            "专业：电子信息工程",
+            "学制：2012.09-2016.06 4年"
+        ],
+        [
+            "工作年限：3年",
+            "2016.10-2017.10：厦门侠网旅游有限公司-web端开发实习",
+            "2018.03-2018.07：外派中国联通系统集成-前端开发工程师",
+            "2018.08.09-至今：河北鸿海环保科技有限公司-前端开发工程师"
+        ],
+        [
+            "应聘岗位：前端开发工程师",
+            "期望工作地点：河北省、北京市",
+            "期望薪资：10K~8k"
+        ],
+        [
+            "电话：15369930905",
+            "邮箱：yuebanzhou@163.com",
+            "微信：zhouyan_598065612"
+        ],
+        [
+            "GitHub：https://github.com/YuebanZhou",
+            "博客：https://yuebanzhou.github.io/",
+            "思否：https://segmentfault.com/u/shenbiaohutixiaoyueban"
+        ],
+        [
+            "HTML",
+            "CSS",
+            "javaScript",
+            "jQuery",
+            "ajax",
+            "echarts",
+            "node",
+            "VUE",
+            "Angular",
+            "git",
+            "artTemplate",
+            "VSCode",
+            "eclipse",
+            "正则",
+            "微信开发"
+        ],
+        []
+    ],
+    "exparr": [{
+        "time": "2016.10-2017.10",
+        "company": "厦门侠网旅游有限公司-web端开发",
+        "work": [{
+            "time": "2016.11-2017.03",
+            "objectName": "大学生游乐网",
+            "objectDetail": "针对大学生的服务网站，包括班级出游、驾校培训、考研信息发布、四六级信息发布等服务。",
+            "objectModel": "包括顶部导航模块；信息展示模块；支付模块。",
+            "myModel": "熟悉逻辑流程；搭建静态页面；实现动画效果；ajax实现数据交互。",
+            "myIssue": "不能适配屏幕；轮播图卡顿。",
+            "solve": "使用CSS媒体查询定位缩放；定时器及时清理。"
+        },{
+            "time": "2017.03-2017.05",
+            "objectName": "侠侣亲子游",
+            "objectDetail": "厦门地区，幼儿园、小区、家庭亲子出游活动。",
+            "objectModel": "包括顶部导航模块；信息展示模块；搜索模块；支付模块。",
+            "myModel": "搭建页面；实现动画效果；ajax实现数据交互。",
+            "myIssue": "支付模块无法实现数据双向绑定；angular钩子函数使用不熟练。",
+            "solve": "更换模板，使用angular；使用ajax进行数据交互。"
+        }, {
+            "time": "2017.06-2017.08",
+            "objectName": "侠侣周边游",
+            "objectDetail": "侠侣亲子游的拓展。展示各个地区旅游景点的信息，提供购买门票功能。",
+            "objectModel": "包括信息展示模块；导航模块；咨询模块；搜索模块；支付模块。",
+            "myModel": "修改与亲子游功能不同的模块；ajax调用接口交互数据；实现模糊查询功能。",
+            "myIssue": "",
+            "solve": ""
+        }, {
+            "time": "2017.08-2017.10",
+            "objectName": "侠侣亲子游移动端",
+            "objectDetail": "侠侣亲子游网的移动端开发。",
+            "objectModel": "搜索模块；导航模块；分享模块；联系客服模块。",
+            "myModel": "重新搭建H5页面；ajax实现数据交互。",
+            "myIssue": "tab栏回弹效果无法实现。",
+            "solve": "引用外部插件解决。"
+        }, {
+            "time": "2017.09-2017.10",
+            "objectName": "后台管理系统",
+            "objectDetail": "员工的信息管理系统，增删改查。",
+            "objectModel": "现成模板",
+            "myModel": "删减不需要模块；调整模板样式；ajax调用接口实现数据的增删改查",
+            "myIssue": "框架不适配IE8及其以下浏览器。",
+            "solve": "调整样式，做到从上到下兼容。"
+        }]
+    }, {
+        "time": "2018.03-2018.07",
+        "company": "外派中国联通系统集成-前端开发工程师",
+        "work": [{
+            "time": "2018.03-2018.05",
+            "objectName": "devops平台管理",
+            "objectDetail": "对公司内部项目进行管理。包括代码获取，代码构建等功能。",
+            "objectModel": "信息展示模块；查看历史模块；获取代码模块；构建代码模块。",
+            "myModel": "分析逻辑流程；构建整体框架；实现逻辑功能；调用接口渲染数据。",
+            "myIssue": "table分页切换无法固定表头；前后端分离，不能实时获取查询结果，无法渲染到表格中。",
+            "solve": "放置两个table，一个作为表头一个作为表格内容，分页只切换表格内容部分；获取查询内容，生成新table覆盖全部table。"
+        },{
+            "time": "2018.05-2018.05",
+            "objectName": "engine内嵌页面",
+            "objectDetail": "内嵌到其他项目的页面，填写项目的配置信息。包含提交功能。",
+            "objectModel": "信息填写模块；信息提交模块；信息回看模块。",
+            "myModel": "排版填写input模块；提交获取所有信息；回看展示所有信息。",
+            "myIssue": "根据用户权限展示不同模块；前后台密钥解除方法不一致。",
+            "solve": "登录时存session；后台控制权限决定是否提交。"
+        },{
+            "time": "2018.04-2018.07",
+            "objectName": "双终端系统",
+            "objectDetail": "对联通用户信息进行统计，监控异常用户。数据展示。",
+            "objectModel": "现成模板",
+            "myModel": "调整样式；兼容到IE浏览器；实现数据交互。",
+            "myIssue": "",
+            "solve": ""
+        },  {
+            "time": "2018.05-2018.07",
+            "objectName": "沃门店项目",
+            "objectDetail": "数据可视化。展示联通门店活动信息。全国，省级，地市级的用户量等信息展示。各门店短信发送量展示。排名信息。",
+            "objectModel": "排名展示模块；地图展示模块；实时展示发送量模块。",
+            "myModel": "使用echart展示地图、折线图；实现动态效果；后台传过来的数据进行排序并展示。",
+            "myIssue": "数据刷新交互过于频繁。",
+            "solve": "webSocket"
+        }, {
+            "time": "2018.06-2018.07",
+            "objectName": "CEM数据大屏展示",
+            "objectDetail": "数据展示项目，数据可视化，以折线图，柱图，饼图，仪表盘等形式展示数据。观察排名情况。",
+            "objectModel": "大学生游乐网",
+            "myModel": "使用echart展示地图、折线图、柱图、饼图；实现动画效果。",
+            "myIssue": "echart宽度切换时不能百分比适配。",
+            "solve": "切换时找不会隐藏的父元素，为父元素添加百分比宽度。"
+        }]
+    }, {
+        "time": "2018.08-至今",
+        "company": "河北鸿海环保科技有限公司-前端开发工程师",
+        "work": [{
+            "time": "2018.08-至今",
+            "objectName": "质控智能化监管平台 http://cloud.honhihb.com/view/index.html",
+            "objectDetail": "污染物智能化监控管理平台",
+            "objectModel": "下发质控模块；结果查询模块；管理批次模块；设置菜单模块；用户管理模块。",
+            "myModel": "维护；添加参数同步功能模块。",
+            "myIssue": "",
+            "solve": ""
+        }, {
+            "time": "2018.08-至今",
+            "objectName": "河流预警平台 http://60.205.146.81:8199/honhihb/a?login",
+            "objectDetail": "浮标站岸边站监控管理平台",
+            "objectModel": "展示模块；查询模块；监控模块。",
+            "myModel": "维护；添加监控模块",
+            "myIssue": "",
+            "solve": ""
+        }, {
+            "time": "2018.11-2018.11",
+            "objectName": "电极管理平台",
+            "objectDetail": "查看电极信息",
+            "objectModel": "现成模板",
+            "myModel": "调整样式；实现逻辑功能。",
+            "myIssue": "",
+            "solve": ""
+        }, {
+            "time": "2018.12-至今",
+            "objectName": "质控新平台",
+            "objectDetail": "质控智能化管理平台迁移",
+            "objectModel": "下发质控模块；结果查询模块；管理批次模块；设置菜单模块；用户管理模块",
+            "myModel": "修改模板样式；实现逻辑功能",
+            "myIssue": "模板局限性大",
+            "solve": "摒弃部分模板"
+        }]
+    }]
+}

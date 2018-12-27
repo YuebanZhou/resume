@@ -1,11 +1,25 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  var contentHeight = $(window).height() - $("#head").height();
+  $("#content").height(contentHeight)
+  $("#content .contentBox").height(contentHeight)
+  $("#content .contentBox .bannerBox").height(contentHeight)
+  $("#content .contentBox .bannerBox ul").height(contentHeight)
+  // $("#content .contentBox .bannerBox ul li").height(contentHeight)
+  $("#content .contentBox .bannerBox span").height(contentHeight)
+  
+  // 切换tab栏效果
   tabClick();
+  // 渲染banner内容
   rebanner();
+  // 左右切换banner
   changeimg();
+  // 渲染experience内容
+  reexperience()
 });
+// 切换tab栏效果
 function tabClick() {
   // 切换tab
-  $("a").on("click", function() {
+  $("a").on("click", function () {
     $("li").removeClass("now");
     $(this)
       .parent()
@@ -20,30 +34,29 @@ function tabClick() {
       .show(500);
   });
 }
+// 渲染banner内容
 function rebanner() {
+  var imgarr;
+  var msgarr;
+  $.ajax({
+    url: "./json/msg.json",
+    type: "post",
+    dataType: "json",
+    async: false,
+    success: function (data) {
+      imgarr = data.imgarr;
+      msgarr = data.msgarr;
+    }
+  })
   // 渲染banner
-  var imgarr = [
-    "./img/imager1.png",
-    "./img/imager2.png",
-    "./img/imager3.png",
-    "./img/imager4.png",
-    "./img/imager5.png",
-    "./img/imager6.png",
-    "./img/imager7.png"
-  ];
-  var msgarr = [
-    "<div><span>姓名：周琰</span><span>学历：本科学士</span><span>毕业院校：河北北方学院</span><span>专业：电子信息工程</span></div>",
-    "<div><span>应聘岗位：前端工程师</span><span>期望工作地点：北京市</span><span>期望薪资：10K</span></div>",
-    "<div><span>工作年限：3年</span><span>2016.10-2017.10：厦门侠网旅游有限公司</span><span>2018.03-2018.07：外派中国联通系统集成</span><span>2018.08.09-至今：河北鸿海环保科技有限公司</span></div>",
-    "<div><span>电话：15369930905</span><span>邮箱：yuebanzhou@163.com</span></div>",
-    "./img/imager5.png",
-    "./img/imager6.png",
-    "./img/imager7.png"
-  ];
   var str = "";
   var len = imgarr.length;
   for (var i = 0; i < len; i++) {
-    str += "<li>" + msgarr[i] + "</li>";
+    var temp = "";
+    for (var j = 0; j < msgarr[i].length; j++) {
+      temp += "<span>" + msgarr[i][j] + "</span>";
+    }
+    str += "<li><div>" + temp + "</div></li>";
   }
   // 渲染li标签，渲染背景图片
   $("#content .banner .bannerBox ul").html(str);
@@ -58,7 +71,7 @@ function rebanner() {
   $("#content .banner .bannerBox ul li").width(basicWidth);
   $("#content .banner .bannerBox ul").width(basicWidth * (len + 2));
 }
-
+// 左右切换banner
 function changeimg() {
   var liW = $("#content .bannerBox ul li").width();
   var len = $("#content .bannerBox ul li").length;
@@ -66,7 +79,7 @@ function changeimg() {
   var i = 0;
 
   // 右
-  $("#content .next").on("click", function() {
+  $("#content .next").on("click", function () {
     i += 1;
     if (i > len - 1) {
       i = 0;
@@ -74,11 +87,50 @@ function changeimg() {
     $("#content ul").css("left", -liW * i);
   });
   // 左
-  $("#content .prev").on("click", function() {
+  $("#content .prev").on("click", function () {
     i -= 1;
     if (i < 0) {
       i = len - 1;
     }
     $("#content ul").css("left", -liW * i);
   });
+}
+// 渲染experience内容
+function reexperience() {
+  var exparr = [];
+  $.ajax({
+    url: "./json/msg.json",
+    type: "post",
+    dataType: "json",
+    async: false,
+    success: function (data) {
+      exparr = data.exparr;
+    }
+  });
+  var str = ""
+  for (var i = 0; i < exparr.length; i++) {
+    str += "<div class='block'><p class='title'><span class='time'>" + exparr[i].time + "</span>"
+    str += "<span class='company'>" + exparr[i].company + "</span></p>"
+    var temp = "";
+    for (var j = 0; j < exparr[i].work.length; j++) {
+      temp += "<div class='sinblock'><span class='time'>" + exparr[i].work[j].time + "</span>"
+      temp += "<span class='objectName'>" + exparr[i].work[j].objectName + "</span>"
+      temp += "<div class='objectDetail'><span class='text'>项目简介：</span>" + exparr[i].work[j].objectDetail + "</div>"
+      temp += "<div class='objectModel'><span class='text'>项目模块：</span>" + exparr[i].work[j].objectModel + "</div>"
+      temp += "<div class='myModel'><span class='text'>我负责的模块：</span>" + exparr[i].work[j].myModel + "</div>"
+      temp += "<div class='myIssue'><span class='text'>遇到的问题：</span>" + exparr[i].work[j].myIssue + "</div>"
+      temp += "<div class='solve'><span class='text'>解决办法：</span>" + exparr[i].work[j].solve + "</div></div>"
+    }
+    str += temp;
+    str += "<i></i></div>"
+  }
+
+  $(".experienceBox .boxcontain").html(str);
+  $(".experienceBox .boxcontain .block").on("mouseenter",function(){
+    $(this).find("i").addClass("lime")
+  })
+  $(".experienceBox .boxcontain .block").on("mouseleave",function(){
+    $(this).find("i").removeClass("lime")
+  })
+  
 }
