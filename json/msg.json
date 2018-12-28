@@ -67,7 +67,7 @@
             "myModel": "熟悉逻辑流程；搭建静态页面；实现动画效果；ajax实现数据交互。",
             "myIssue": "不能适配屏幕；轮播图卡顿。",
             "solve": "使用CSS媒体查询定位缩放；定时器及时清理。"
-        },{
+        }, {
             "time": "2017.03-2017.05",
             "objectName": "侠侣亲子游",
             "objectDetail": "厦门地区，幼儿园、小区、家庭亲子出游活动。",
@@ -111,7 +111,7 @@
             "myModel": "分析逻辑流程；构建整体框架；实现逻辑功能；调用接口渲染数据。",
             "myIssue": "table分页切换无法固定表头；前后端分离，不能实时获取查询结果，无法渲染到表格中。",
             "solve": "放置两个table，一个作为表头一个作为表格内容，分页只切换表格内容部分；获取查询内容，生成新table覆盖全部table。"
-        },{
+        }, {
             "time": "2018.05-2018.05",
             "objectName": "engine内嵌页面",
             "objectDetail": "内嵌到其他项目的页面，填写项目的配置信息。包含提交功能。",
@@ -119,7 +119,7 @@
             "myModel": "排版填写input模块；提交获取所有信息；回看展示所有信息。",
             "myIssue": "根据用户权限展示不同模块；前后台密钥解除方法不一致。",
             "solve": "登录时存session；后台控制权限决定是否提交。"
-        },{
+        }, {
             "time": "2018.04-2018.07",
             "objectName": "双终端系统",
             "objectDetail": "对联通用户信息进行统计，监控异常用户。数据展示。",
@@ -127,7 +127,7 @@
             "myModel": "调整样式；兼容到IE浏览器；实现数据交互。",
             "myIssue": "",
             "solve": ""
-        },  {
+        }, {
             "time": "2018.05-2018.07",
             "objectName": "沃门店项目",
             "objectDetail": "数据可视化。展示联通门店活动信息。全国，省级，地市级的用户量等信息展示。各门店短信发送量展示。排名信息。",
@@ -180,5 +180,84 @@
             "myIssue": "模板局限性大",
             "solve": "摒弃部分模板"
         }]
-    }]
+    }],
+    "skillarr": [{
+            "skillName": "HTML&CSS",
+            "percent": "90%"
+        },
+        {
+            "skillName": "javaScript",
+            "percent": "90%"
+        },
+        {
+            "skillName": "jQuery",
+            "percent": "90%"
+        },
+        {
+            "skillName": "ajax",
+            "percent": "90%"
+        },
+        {
+            "skillName": "echarts",
+            "percent": "70%"
+        },
+        {
+            "skillName": "node",
+            "percent": "60%"
+        },
+        {
+            "skillName": "VUE&Angular",
+            "percent": "60%"
+        },
+        {
+            "skillName": "git",
+            "percent": "80%"
+        },
+        {
+            "skillName": "VSCode",
+            "percent": "90%"
+        },
+        {
+            "skillName": "eclipse",
+            "percent": "50%"
+        },
+        {
+            "skillName": "正则",
+            "percent": "60%"
+        },
+        {
+            "skillName": "小程序",
+            "percent": "80%"
+        },
+        {
+            "skillName": "PHP",
+            "percent": "40%"
+        }
+    ],
+    "contactarr": [{
+            "name": "phone",
+            "num": "15269930905",
+            "img": "./img/phone.jpg"
+        },
+        {
+            "name": "koukou",
+            "num": "598065612",
+            "img": "./img/koukou.jpg"
+        },
+        {
+            "name": "weixin",
+            "num": "zhouyan_598065612",
+            "img": "./img/weixin.jpg"
+        },{
+            "name": "mail",
+            "num": "yuebanzhou@163.com",
+            "img": "./img/phone.jpg"
+        }
+    ],
+    "endarr":[
+        {"name":"segmentfault","src":"https://segmentfault.com/u/shenbiaohutixiaoyueban"},
+        {"name":"hexo","src":"https://yuebanzhou.github.io/"},
+        {"name":"Github","src":"https://github.com/YuebanZhou"},
+        {"name":"cnblogs","src":"https://www.cnblogs.com/yuebanzhou/"}
+    ]
 }
