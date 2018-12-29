@@ -14,7 +14,7 @@ $(document).ready(function () {
   var contactarr = [];
   var endarr = [];
   $.ajax({
-    url: "https://www.easy-mock.com/mock/5c25851dc2518a5416c67baf/resume",
+    url: "./json/msg.json",
     type: "post",
     dataType: "json",
     async: false,
