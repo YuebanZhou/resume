@@ -15,7 +15,7 @@ $(document).ready(function () {
   var endarr = [];
   $.ajax({
     url: "./json/msg.json",
-    type: "post",
+    type: "get",
     dataType: "json",
     async: false,
     success: function (data) {
