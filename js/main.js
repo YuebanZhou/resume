@@ -14,7 +14,7 @@ $(document).ready(function () {
   var contactarr = [];
   var endarr = [];
   $.ajax({
-    url: "./json/msg.json",
+    url: "https://www.easy-mock.com/mock/5c25851dc2518a5416c67baf/resume",
     type: "post",
     dataType: "json",
     async: false,
@@ -210,7 +210,6 @@ function reinterest2(skillarr) {
   $(".interestBox ul").html(str);
   $(".interestBox li div").each(function () {
     var percent = $(this).attr("percent");
-    console.log(percent);
     var html=$(this).html();
     $(this).mouseenter(function () {
       $(this).html(percent)
