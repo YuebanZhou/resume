@@ -182,57 +182,95 @@
         }]
     }],
     "skillarr": [{
-            "skillName": "HTML&CSS",
-            "percent": "90%"
+            "team": "team1",
+            "data": [{
+                "skillName": "HTML",
+                "percent": "90%"
+            }, {
+                "skillName": "CSS",
+                "percent": "90%"
+            }, {
+                "skillName": "javaScript",
+                "percent": "90%"
+            }]
         },
         {
-            "skillName": "javaScript",
-            "percent": "90%"
+            "team": "team2",
+            "data": [{
+                    "skillName": "jQuery",
+                    "percent": "90%"
+                },
+                {
+                    "skillName": "ajax",
+                    "percent": "90%"
+                }, {
+                    "skillName": "node",
+                    "percent": "60%"
+                }
+            ]
         },
         {
-            "skillName": "jQuery",
-            "percent": "90%"
+            "team": "team3",
+            "data": [{
+                "skillName": "VUE",
+                "percent": "60%"
+            }, {
+                "skillName": "Angular",
+                "percent": "60%"
+            }, {
+                "skillName": "React",
+                "percent": "60%"
+            }]
         },
         {
-            "skillName": "ajax",
-            "percent": "90%"
+            "team": "team4",
+            "data": [{
+                    "skillName": "VSCode",
+                    "percent": "90%"
+                },
+                {
+                    "skillName": "eclipse",
+                    "percent": "50%"
+                }
+            ]
         },
         {
-            "skillName": "echarts",
-            "percent": "70%"
+            "team": "team5",
+            "data": [{
+                "skillName": "JAVA",
+                "percent": "60%"
+            }, {
+                "skillName": "C++",
+                "percent": "60%"
+            }]
         },
         {
-            "skillName": "node",
-            "percent": "60%"
-        },
-        {
-            "skillName": "VUE&Angular",
-            "percent": "60%"
-        },
-        {
-            "skillName": "git",
-            "percent": "80%"
-        },
-        {
-            "skillName": "VSCode",
-            "percent": "90%"
-        },
-        {
-            "skillName": "eclipse",
-            "percent": "50%"
-        },
-        {
-            "skillName": "正则",
-            "percent": "60%"
-        },
-        {
-            "skillName": "小程序",
-            "percent": "80%"
-        },
-        {
-            "skillName": "PHP",
-            "percent": "40%"
+            "team": "team6",
+            "data": [{
+                    "skillName": "echarts",
+                    "percent": "70%"
+                },
+
+                {
+                    "skillName": "git",
+                    "percent": "80%"
+                },
+
+                {
+                    "skillName": "正则",
+                    "percent": "60%"
+                },
+                {
+                    "skillName": "小程序",
+                    "percent": "80%"
+                },
+                {
+                    "skillName": "PHP",
+                    "percent": "40%"
+                }
+            ]
         }
+
     ],
     "contactarr": [{
             "name": "phone",
@@ -248,16 +286,27 @@
             "name": "weixin",
             "num": "zhouyan_598065612",
             "img": "./img/weixin.jpg"
-        },{
+        }, {
             "name": "mail",
             "num": "yuebanzhou@163.com",
             "img": "./img/phone.jpg"
         }
     ],
-    "endarr":[
-        {"name":"segmentfault","src":"https://segmentfault.com/u/shenbiaohutixiaoyueban"},
-        {"name":"hexo","src":"https://yuebanzhou.github.io/"},
-        {"name":"Github","src":"https://github.com/YuebanZhou"},
-        {"name":"cnblogs","src":"https://www.cnblogs.com/yuebanzhou/"}
+    "endarr": [{
+            "name": "segmentfault",
+            "src": "https://segmentfault.com/u/shenbiaohutixiaoyueban"
+        },
+        {
+            "name": "hexo",
+            "src": "https://yuebanzhou.github.io/"
+        },
+        {
+            "name": "Github",
+            "src": "https://github.com/YuebanZhou"
+        },
+        {
+            "name": "cnblogs",
+            "src": "https://www.cnblogs.com/yuebanzhou/"
+        }
     ]
 }

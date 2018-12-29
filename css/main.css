@@ -155,12 +155,7 @@
 
 /* ***** banner end ***** */
 /* ***** basic start ***** */
-#content .basicBox ul {
-  margin: 0 auto;
-  padding: 10px 0;
-}
 
-#content .basicBox ul li {}
 
 
 /* ***** basic end ***** */
@@ -277,106 +272,250 @@
   background-size: cover;
 }
 
-#content .interest ul {
-  width: 1000px;
-  margin: 20px auto;
-  /* background: url("../img/pagebgintes2.jpg") no-repeat center center;
-  background-size: cover; */
-}
-
+/* 整体样式 start */
 #content .interestBox li {
-  float: left;
-  position: relative;
-  height: 180px;
-  width: 180px;
+  padding: 10px;
   margin: 10px;
-  border-radius: 50%;
-  box-shadow: 3px 3px 10px #666;
-  box-sizing: border-box;
-  border: 15px solid #333;
-  /* margin-top: 100px; */
+  /* width: 100%; */
 }
 
-#content .interestBox li .frount {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  background: silver;
-  box-shadow: 0 0 20px inset #aee8ea;
-}
-
-#content .interestBox li .behind {
-  width: 400px;
-  height: 400px;
-  background-color: #000;
-  position: absolute;
-  top: 76px;
-  left: -125px;
-  animation: myrotate 6s linear infinite;
-  border-radius: 45%;
-  border: 2px dotted #16655d;
-}
-
-
-@keyframes myrotate {
-  from {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-
-#content .interestBox li p {
-  color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+#content .interestBox li div {
+  float: left;
+  font-size: 20px;
   font-weight: bold;
-}
-
-/* #content .interestBox li:after,
-#content .interestBox li:before {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 130px;
-  background: #333;
-  box-shadow: 3px 3px 10px #666;
-}
-
-#content .interestBox li:after {
-  left: 111px;
-  top: -100px;
-  transform: rotate(-31deg);
-}
-
-#content .interestBox li:before {
-  left: 36px;
-  top: -100px;
-  transform: rotate(31deg);
-}
-
-#content .interestBox li p:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -188px;
-  width: 10px;
-  height: 10px;
-  background-color: #333;
   border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow: 3px 3px 10px #666;
-} */
+  margin: 20px;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
 
+#content .interestBox li div:after,#content .interestBox li div:before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  margin-left: -70px;
+  box-sizing: border-box;
+  margin-top: -70px;
+}
+
+/* 整体样式 end */
+
+/* 第一行 光圈放大 start */
+#content .interestBox li:nth-child(1) {
+  background: #41AB6B;
+}
+
+#content .interestBox li:nth-child(1) div {
+  color: #fff;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  border: 10px solid #41AB6B;
+  background: #54B47A;
+  transition: background 1s;
+  -webkit-transition: background 1s;
+}
+
+#content .interestBox li:nth-child(1) div:after {
+  transform: scale(0.8);
+  border: 0px solid transparent;
+  transition: border 1s;
+  -webkit-transition: border 1s;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+}
+
+#content .interestBox li:nth-child(1) div:hover {
+  color: #41AB6B;
+  background: #fff;
+}
+
+#content .interestBox li:nth-child(1) div:hover:after {
+  border: 5px solid #fff;
+  transform: scale(1);
+}
+
+/* 第一行 光圈放大 end */
+
+/* 第二行  反色光圈放大 start */
+#content .interestBox li:nth-child(2) {
+  background: #EEA303;
+}
+
+#content .interestBox li:nth-child(2) div {
+  color: #fff;
+  background: #EEA303;
+  border: 10px solid #fff;
+  transition: color 1s,background 1s;
+  -webkit-transition: color 1s,background 1s;
+}
+
+#content .interestBox li:nth-child(2) div:after {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transform: scale(1);
+  transition: border 1s,transform 1s;
+  -webkit-transition: border 1s,transform 1s;
+}
+
+ #content .interestBox li:nth-child(2) div:hover {
+  color: #EEA303;
+  background: #fff;
+} 
+#content .interestBox li:nth-child(2) div:hover:after {
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  transform: scale(1.5);
+}
+
+/* 第二行 反色光圈放大 end */
+/* 第三行 旋转双色圈 start */
+
+#content .interestBox li:nth-child(3) {
+  background: #f06060;
+}
+
+#content .interestBox li:nth-child(3) div {
+  color: #F06060;
+  background: #fff;
+  border: 10px solid #F06060;
+  transform: rotate(0);
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+}
+
+#content .interestBox li:nth-child(3) div:after {
+  border: 2px solid rgb(247, 155, 155);
+  transform: scale(0.5);
+  transition: border 1s,transform 1s;
+  -webkit-transition: border 1s,transform 1s;
+}
+#content .interestBox li:nth-child(3) div:before {
+  border: 2px solid rgb(247, 155, 155);
+  transform: scale(1.1);
+  transition: border 1s,transform 1s;
+  -webkit-transition: border 1s,transform 1s;
+}
+ #content .interestBox li:nth-child(3) div:hover {
+  transform: rotate(360deg);
+} 
+#content .interestBox li:nth-child(3) div:hover:before {
+  border: 10px solid rgb(247, 155, 155);
+  transform: scale(0.5);
+}
+#content .interestBox li:nth-child(3) div:hover:after {
+  border: 10px solid rgb(247, 155, 155);
+  transform: scale(1.1);
+}
+
+/* 第三行 旋转双色圈 end */
+/* 第四行 border样式 start */
+#content .interestBox li:nth-child(4) {
+  background: #0E83CD;
+}
+
+#content .interestBox li:nth-child(4) div {
+  color: #0E83CD;
+  background: #fff;
+  border: 10px solid #0E83CD;
+  transition: color 1s,background 1s;
+  -webkit-transition: color 1s,background 1s;
+}
+
+#content .interestBox li:nth-child(4) div:after {
+  border: 1px solid #fff;
+  transform: scale(0.8);
+  transition: border 1s;
+  -webkit-transition: border 1s;
+}
+#content .interestBox li:nth-child(4) div:before {
+  border: 1px solid #fff;
+  transform: scale(1.1);
+  transition: border 1s;
+  -webkit-transition: border 1s;
+}
+ #content .interestBox li:nth-child(4) div:hover {
+  color: #fff;
+  background: #0E83CD;
+} 
+#content .interestBox li:nth-child(4) div:hover:after {
+  border: 5px double #fff;
+}
+#content .interestBox li:nth-child(4) div:hover:before {
+  border: 5px dotted #fff;
+}
+/* 第四行 border样式 end */
+/* 第五行 start */
+#content .interestBox li:nth-child(5) {
+  background: #702FA8;
+}
+
+#content .interestBox li:nth-child(5) div {
+  color: #702FA8;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  border: 10px solid #702FA8;
+  background: #fff;
+  transition: background 1s,color 1s;
+  -webkit-transition: background 1s,color 1s;
+}
+
+#content .interestBox li:nth-child(5) div:after {
+  transform: scale(1.2);
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: border 1s;
+  -webkit-transition: border 1s;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+}
+
+#content .interestBox li:nth-child(5) div:hover {
+  color: #fff;
+  background: #702FA8;
+}
+
+#content .interestBox li:nth-child(5) div:hover:after {
+  border: 10px solid rgba(255, 255, 255, 0.9);
+  transform: scale(0.8);
+}
+
+/* 第五行 end */
+/* 第六行 start */
+#content .interestBox li:nth-child(6) {
+  background: #D54F30;
+}
+
+#content .interestBox li:nth-child(6) div {
+  color: #fff;
+  background: #D54F30;
+  border: 3px solid #fff;
+  transform: scale(1);
+  transition: color 1s,background 1s,transform 1s;
+  -webkit-transition: color 1s,background 1s,transform 1s;
+}
+
+#content .interestBox li:nth-child(6) div:after {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transform: scale(1);
+  transition: border 1s,transform 1s;
+  -webkit-transition: border 1s,transform 1s;
+}
+
+ #content .interestBox li:nth-child(6) div:hover {
+  color: #D54F30;
+  background: #fff;
+  transform: scale(1.2);
+} 
+#content .interestBox li:nth-child(6) div:hover:after {
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  transform: scale(0.8);
+}
+
+/* 第六行 end */
 /* ***** interest end ***** */
 /* ***** contact start ***** */
 #content .contact {
@@ -385,21 +524,25 @@
   background-size: cover;
   padding: 20px;
 }
+
 #content .contactBox {
   width: 860px;
   margin: 20px auto;
 }
+
 #content .contactBox .cblock {
 
   width: 200px;
   height: 300px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   float: left;
   margin-left: 10px;
 }
+
+
 #content .contactBox .cblock:first-child {
   margin-left: 0;
 }
@@ -407,9 +550,25 @@
 
 #content .contactBox .cblock .top {
   width: 200px;
-  height: 300px;
+  height: 230px;
   text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
   /* line-height: 300px; */
+}
+
+#content .contactBox .top:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 70px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-top: 1px dashed #333;
+  background-color: #fff;
 }
 
 #content .contactBox .cblock .top span {
@@ -424,6 +583,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  z-index: 3;
 }
 
 #content .contactBox .cblock .top i {
@@ -465,21 +629,26 @@
 
 /* ***** contact end ***** */
 /* ***** end start ***** */
-#content .endBox div {
-  margin: 50px auto;
-  width: 575px;
-
+#content .end {
+  overflow: auto;
+  background: url("../img/pagebgend.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
+#content .endBox {
+  width: 575px;
+  margin: 50px auto;
+}
+
 #content .endBox a {
   padding: 10px;
   margin: 10px;
-  color: #666;
 }
+
 #content .endBox a:hover {
-  padding: 10px;
-  margin: 10px;
   color: #333;
 }
+
 /* ***** end end ***** */
 /* ********** content end ********** */
 

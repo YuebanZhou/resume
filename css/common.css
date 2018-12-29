@@ -33,35 +33,39 @@ a {
 }
 
 @font-face {
-    font-family: 'iconfont';  /* project id 982743 */
-    src: url('//at.alicdn.com/t/font_982743_n107z94je6.eot');
-    src: url('//at.alicdn.com/t/font_982743_n107z94je6.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_982743_n107z94je6.woff') format('woff'),
-    url('//at.alicdn.com/t/font_982743_n107z94je6.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_982743_n107z94je6.svg#iconfont') format('svg');
-  }
-
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg') format('svg');
+}
 .iconfont {
     font-family: "iconfont" !important;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* color: #666; */
+    color: #666;
 }
+
 .iconfont1 {
     font-size: 80px;
 }
+
 .iconfont2 {
     font-size: 20px;
 }
+
 .iconfont3 {
     font-size: 100px;
     line-height: 230px;
 }
+
 .iconfont4 {
     font-size: 100px;
-    
+
 }
+
 /*本项目使用的18个图标  */
 .icon-prev:before {
     content: '\e600';
@@ -122,18 +126,23 @@ a {
 .icon-phone:before {
     content: '\e628';
 }
+
 .icon-mail:before {
     content: '\e66e';
 }
+
 .icon-segmentfault:before {
-    content: '\e603';
+    content: '\e602';
 }
+
 .icon-hexo:before {
     content: '\e656';
 }
+
 .icon-Github:before {
-    content: '\e602';
+    content: '\f1b4';
 }
+
 .icon-cnblogs:before {
     content: '\e632';
 }

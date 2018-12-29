@@ -31,9 +31,15 @@ $(document).ready(function () {
   tabClick();
   rebanner(imgarr, msgarr);
   reexperience(exparr);
-  reinterest(skillarr);
+  // reinterest(skillarr);
   recontact(contactarr);
   reend(endarr);
+  reinterest2(skillarr);
+  $(window).resize(function () {
+    var width = document.body.clientWidth;
+    $("#content .bannerBox").width(width);
+    $("#content .bannerBox ul li").width(width);
+  })
 });
 // 切换tab栏效果
 function tabClick() {
@@ -183,11 +189,34 @@ function recontact(contactarr) {
 function reend(endarr) {
   var str = "";
   for (var i = 0; i < endarr.length; i++) {
-    str += `
-    <a href="`+endarr[i].src+`" title="`+endarr[i].name+`" target="_blank">
-      <i class="iconfont iconfont4 icon-`+endarr[i].name+`"></i>
-    </a>
+    str += `<div>
+      <a href="` + endarr[i].src + `" class="iconfont iconfont4 icon-` + endarr[i].name + `"></a>
+    </div>
     `
   };
-  $("#content .endBox div").html(str)
+  //$("#content .endBox div").html(str)
+}
+
+function reinterest2(skillarr) {
+  var str = "";
+  for (var i = 0; i < skillarr.length; i++) {
+    
+    var temp="";
+    for(var j=0;j<skillarr[i].data.length;j++) {
+      temp += `<div percent="` + skillarr[i].data[j].percent + `">` + skillarr[i].data[j].skillName + `</div>`
+    }
+    str += "<li class='clearfloat'>"+temp+"</li>"
+  }
+  $(".interestBox ul").html(str);
+  $(".interestBox li div").each(function () {
+    var percent = $(this).attr("percent");
+    console.log(percent);
+    var html=$(this).html();
+    $(this).mouseenter(function () {
+      $(this).html(percent)
+    });
+    $(this).mouseleave(function () {
+      $(this).html(html)
+    })
+  })
 }
