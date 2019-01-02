@@ -1,6 +1,10 @@
 $(document).ready(function () {
+  setTimeout(function () {
+    $(".mask").hide()
+  }, 3000);
   // 设定banner高度
   var contentHeight = $(window).height() - $("#head").height();
+  $(".mask").height($(window).height());
   $("#content").height(contentHeight);
   $("#content .contentBox").height(contentHeight);
   $("#content .contentBox .bannerBox").height(contentHeight);
@@ -189,28 +193,28 @@ function recontact(contactarr) {
 function reend(endarr) {
   var str = "";
   for (var i = 0; i < endarr.length; i++) {
-    str += `<div>
-      <a href="` + endarr[i].src + `" class="iconfont iconfont4 icon-` + endarr[i].name + `"></a>
+    str += `<div style='display:inline-block;width:22%;'>
+      <a href="` + endarr[i].src + `" target='_blank' class="iconfont iconfont4 icon-` + endarr[i].name + `"></a>
     </div>
     `
   };
-  //$("#content .endBox div").html(str)
+  $("#content .endBox").html(str)
 }
 
 function reinterest2(skillarr) {
   var str = "";
   for (var i = 0; i < skillarr.length; i++) {
-    
-    var temp="";
-    for(var j=0;j<skillarr[i].data.length;j++) {
+
+    var temp = "";
+    for (var j = 0; j < skillarr[i].data.length; j++) {
       temp += `<div percent="` + skillarr[i].data[j].percent + `">` + skillarr[i].data[j].skillName + `</div>`
     }
-    str += "<li class='clearfloat'>"+temp+"</li>"
+    str += "<li class='clearfloat'>" + temp + "</li>"
   }
   $(".interestBox ul").html(str);
   $(".interestBox li div").each(function () {
     var percent = $(this).attr("percent");
-    var html=$(this).html();
+    var html = $(this).html();
     $(this).mouseenter(function () {
       $(this).html(percent)
     });
